@@ -1,2 +1,2 @@
-# First personal proyect
+# First personal project
 Mini-bootcamp
