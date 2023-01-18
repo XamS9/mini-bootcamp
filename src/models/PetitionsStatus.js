@@ -1,10 +1,10 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db/dbconnect.js");
 const Petitions = require("./Petitions.js");
-const Courses = sequelize.define(
-  "courses",
+const PetitionsStatus = sequelize.define(
+  "petitionsStatus",
   {
-    courseId: {
+    petitionStatusId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -21,14 +21,14 @@ const Courses = sequelize.define(
   }
 );
 
-Courses.hasMany(Petitions, {
-  foreignKey: "courseId",
-  sourceKey: "courseId"
+PetitionsStatus.hasMany(Petitions, {
+  foreignKey: "petitionStatusId",
+  sourceKey: "petitionStatusId"
 });
 
-Petitions.belongsTo(Courses, {
-  foreignKey: "courseId",
-  targetId: "courseId"
-})
+Petitions.belongsTo(PetitionsStatus, {
+  foreignKey: "petitionStatusId",
+  targetId: "petitionStatusId"
+});
 
-module.exports = Courses;
+module.exports = PetitionsStatus;

@@ -22,13 +22,13 @@ const Topics = sequelize.define(
 );
 
 Topics.hasMany(Courses, {
-    foreignKey: "topicId",
-    sourceKey: "topicId"
+  foreignKey: "topicId",
+  sourceKey: "topicId",
 });
 
 Courses.belongsTo(Topics, {
-    foreignKey: "topicId",
-    targetId: "topicId"
+  foreignKey: "topicId",
+  targetId: "topicId",
 });
 
 module.exports = Topics;
