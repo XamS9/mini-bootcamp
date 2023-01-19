@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../db/dbconnect.js");
 const Petitions = require("./Petitions.js");
 const PetitionsStatus = sequelize.define(
-  "petitionsStatus",
+  "petitionsStatu",
   {
     petitionStatusId: {
       type: DataTypes.INTEGER,
