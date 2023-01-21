@@ -3,9 +3,8 @@ const sequelize = require("./db/dbconnect.js");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const cors = require("cors");
-const Users = require("./models/Users.js");
-const Categories = require("./models/Categories.js");
-const PetitionsStatus = require("./models/PetitionsStatus.js")
+const Users = require("./db/models/Users.js");
+const Categories = require("./db/models/Categories.js");
 app.use(cors());
 
 app.get("/api", (req, res) => {

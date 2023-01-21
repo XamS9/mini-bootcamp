@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../db/dbconnect.js.js");
+const sequelize = require("../dbconnect.js");
 const Authors = require("./Authors.js");
 const Students = require("./Students.js");
 const Users = sequelize.define(
@@ -25,6 +25,10 @@ const Users = sequelize.define(
     date: {
       type: DataTypes.DATEONLY,
     },
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaulValue: false,
+    },
   },
   {
     timestamps: false,
@@ -37,9 +41,9 @@ Users.hasMany(Students, {
 });
 
 Users.hasMany(Authors, {
-    foreignKey: "userId",
-    sourceKey: "userId",
-  });
+  foreignKey: "userId",
+  sourceKey: "userId",
+});
 
 Students.belongsTo(Users, {
   foreignKey: "userId",

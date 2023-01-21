@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "babel-node": "babel-node src/server.js",
+    "babel-node": "babel-node src/Backend/server.js",
     "dev": "nodemon --exec npm run babel-node"
   },
   "eslintConfig": {

@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../db/dbconnect.js.js");
-const Petitions = require("./Petitions.js");
+const sequelize = require("../dbconnect.js");
 const Students = sequelize.define("students", {
     studentId: {
         type: DataTypes.INTEGER,
@@ -30,13 +29,4 @@ const Students = sequelize.define("students", {
     timestamps: false
 });
 
-Students.hasMany(Petitions, {
-    foreignKey: "studentId",
-    sourceKey: "studentId"
-})
-
-Petitions.belongsTo(Students,{
-    foreignKey: "studentId",
-    targetId: "studentId"
-})
 module.exports = Students;
