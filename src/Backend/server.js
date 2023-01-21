@@ -1,15 +1,11 @@
-const express = require("express");
+const app = require("./app.js");
 const sequelize = require("./db/dbconnect.js");
 const PORT = process.env.PORT || 3001;
-const app = express();
 const cors = require("cors");
 const Users = require("./db/models/Users.js");
 const Categories = require("./db/models/Categories.js");
+const Roles = require("./db/models/Roles.js");
 app.use(cors());
-
-app.get("/api", (req, res) => {
-  res.json({ message: "Hi from server!" });
-});
 
 async function main() {
   try {

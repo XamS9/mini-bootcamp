@@ -22,12 +22,16 @@ const Users = sequelize.define(
     lastName: {
       type: DataTypes.STRING,
     },
-    date: {
+    born: {
       type: DataTypes.DATEONLY,
     },
     status: {
       type: DataTypes.BOOLEAN,
-      defaulValue: false,
+      defaultValue: false
+    },
+    creationDate: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     },
   },
   {
