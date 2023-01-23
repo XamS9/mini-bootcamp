@@ -1,12 +1,12 @@
 .wrapper {
-    height: 100vh;
+  height: 100vh;
 }
 
 .login {
-    width: 400px;
-    padding: 20px;
-    height: min-content;
-    border-radius: 5px;
-    color: black;
-    background-color: white;
+  width: 400px;
+  padding: 20px;
+  height: min-content;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
 }
