@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.VSCodeCounter
+/.vscode
 /.pnp
 .pnp.js
 

@@ -1,5 +1,5 @@
 import ModalGen from "./courseModal";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import PostData from "../apis/postData.api";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";

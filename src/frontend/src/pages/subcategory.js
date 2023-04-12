@@ -1,12 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import CoursesCard from "../components/coursesCards";
 import GetData from "../apis/getData.api";
-import { useContext, useEffect, useState } from "react";
-import { AppContext } from "../context/loginContext";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Subcategory() {
-  const context = useContext(AppContext)
   const { id } = useParams();
   const [courses, setCourses] = useState([]);
   const [subCategory, setsubCategory] = useState([])
