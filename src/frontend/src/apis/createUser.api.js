@@ -11,7 +11,7 @@ async function CreateUserApi(e, user, password2) {
         confirmButtonColor: "#0d6efd",
       });
     } else {
-      const CreatedUser = await fetch(window.env.URL+"/users", {
+      const CreatedUser = await fetch(process.env.REACT_APP_URL+"/users", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify(user),

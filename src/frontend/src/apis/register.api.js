@@ -11,7 +11,7 @@ async function RegisterApi(e, user, password2) {
         confirmButtonColor: "#0d6efd",
       });
     } else {
-      fetch(window.env.URL+"/users", {
+      fetch(process.env.REACT_APP_URL+"/users", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify(user),

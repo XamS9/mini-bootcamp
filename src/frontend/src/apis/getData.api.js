@@ -1,6 +1,6 @@
 async function GetData(path) {
     try{
-    const fetchedData = await fetch(window.env.URL+path, {
+    const fetchedData = await fetch(process.env.REACT_APP_URL+path, {
         method: "GET",
         mode: "cors",
         headers: {"content-type" : "aplication/json"}

@@ -1,7 +1,7 @@
 import { returnToken } from "../helpers/localStorage.helper";
 async function UpdateData(path, data) {
   try {
-    const updatedData = await fetch(window.env.URL + path, {
+    const updatedData = await fetch(process.env.REACT_APP_URL + path, {
       method: "PUT",
       mode: "cors",
       body: JSON.stringify(data),

@@ -1,10 +1,11 @@
+import { returnToken } from "../helpers/localStorage.helper";
 async function DelData(data) {
     try{
-    const deletedData = await fetch(window.env.URL+data, {
+    const deletedData = await fetch(process.env.REACT_APP_URL+data, {
         method: "DELETE",
         mode: "cors",
         headers: {
-            authorization: "bearer " + window.localStorage.getItem("token"),
+            authorization: "bearer " + returnToken(),
           }
       })
       return deletedData;

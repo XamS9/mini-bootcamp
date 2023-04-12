@@ -1,7 +1,7 @@
 import { returnToken } from "../helpers/localStorage.helper";
 import { tokenAge } from "../helpers/tokenAge.helper";
 async function UserData(setuserData) {
-  const User = await fetch(window.env.URL+"/users/data", {
+  const User = await fetch(process.env.REACT_APP_URL+"/users/data", {
     method: "POST",
     mode: "cors",
     headers: {

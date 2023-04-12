@@ -3,7 +3,7 @@ import {setToken} from "../helpers/localStorage.helper"
 
 async function LoginApi(user) {
   try {
-    fetch(window.env.URL+"/login", {
+    fetch(process.env.REACT_APP_URL+"/login", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(user),

@@ -2,7 +2,7 @@ import { returnToken } from "../helpers/localStorage.helper";
 
 async function PostJSONData(url, data) {
     try{
-    const postedData = await fetch(window.env.URL+url, {
+    const postedData = await fetch(process.env.REACT_APP_URL+url, {
         method: "POST",
         mode: "cors",
         body: JSON.stringify(data),
