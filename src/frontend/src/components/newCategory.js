@@ -1,10 +1,9 @@
 import { useState } from "react";
 import PostJSONData from "../apis/postGenData";
 import { formsValidator } from "./inputValidator";
+import Swal from "sweetalert2";
 function NewCategory() {
-  const initialState = "";
-  const [data, setData] = useState(initialState);
-  const [depends, setDepends] = useState([]);
+  const [data, setData] = useState("");
 
   const categoryTitles = ["Name", "Description"];
 
@@ -12,7 +11,12 @@ function NewCategory() {
     await formsValidator(e);
     if (e.status) {
       await PostJSONData("/categories", data).then((res) => {
-        if (res.ok) setData(initialState);
+        if (res.ok)Swal.fire({
+          title: "Created!",
+          text: "",
+          icon: "success",
+          confirmButtonColor: "#0d6efd"
+        }); ;
       });
     }
   };
