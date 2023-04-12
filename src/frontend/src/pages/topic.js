@@ -21,7 +21,7 @@ function Topic() {
   }, [id]);
   return (
     <div className="container">
-      <h1 className="text-bg-dark text-center rounded">{topic.name}</h1>
+      <h1 className="text-bg-dark text-center rounded">Topic {topic.name}</h1>
       <h4>{topic.description}</h4>
       <div className="text-center">
         <div className="d-flex justify-content-center">

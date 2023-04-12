@@ -17,11 +17,9 @@ const Topics = sequelize.define(
       type: DataTypes.STRING,
     },
     subCategoryId: {
-      primaryKey: true,
       type: DataTypes.INTEGER,
     },
     categoryId: {
-      primaryKey: true,
       type: DataTypes.INTEGER,
     }
   },

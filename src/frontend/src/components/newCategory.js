@@ -4,9 +4,7 @@ import { formsValidator } from "./inputValidator";
 import Swal from "sweetalert2";
 function NewCategory() {
   const [data, setData] = useState("");
-
   const categoryTitles = ["Name", "Description"];
-
   const handleSubmit = async (e) => {
     await formsValidator(e);
     if (e.status) {

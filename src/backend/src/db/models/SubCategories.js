@@ -19,7 +19,6 @@ const subCategories = sequelize.define(
     },
     categoryId: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
     }
   },
   {

@@ -20,7 +20,7 @@ function Subcategory() {
   }, [id]);
   return (
     <div className="container">
-      <h1 className="text-bg-dark text-center rounded">{subCategory.name}</h1>
+      <h1 className="text-bg-dark text-center rounded">Subcategory {subCategory.name}</h1>
       <h4>{subCategory.description}</h4>
       <div className="text-center">
         <div className="d-flex justify-content-center">
