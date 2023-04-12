@@ -1,0 +1,2 @@
+id,email,password,name,lastName,born,status,role
+1,administrator@admin.com,$2b$10$wc19O/OI.L58p545YVwkLO4m9.tX3p5xtWUZ1SSc/d7wlNp5zYp6O,admin,r00t,6/9/2000,true,admin
