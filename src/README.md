@@ -11,4 +11,4 @@ As an admin you can create, read, update and delete every data with the dashboar
 As a student you can only have access to preview the content of any course and subscribe to it if that you want to do. You have a panel with user data and your subscribed courses
 and you can update or modify your user data as well in that panel.
 
-As an author 
+As an author you can do everything like a student but also you can create, update and delete every courses data and sections of them as well.
