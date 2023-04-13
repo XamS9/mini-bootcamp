@@ -1,6 +1,6 @@
-# Mini-bootcamp (online courses)
+# Mini-bootcamp API
 
-Frontend application for mini-bootcamp
+Frontend application for mini-bootcamp api
 
 ## How to run
 

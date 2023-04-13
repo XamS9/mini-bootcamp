@@ -6,7 +6,7 @@ function DashboardSideBar() {
   const context = useContext(AppContext);
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState("General");
-  
+
   let options = [
     "General",
     "Users",
@@ -17,11 +17,11 @@ function DashboardSideBar() {
     "Sections",
   ];
 
-  if(context.userData.role !== "admin"){
-    options = []
-    options.push("Courses")
+  if (context.userData.role !== "admin") {
+    options = [];
+    options.push("General");
   }
-  
+
   const [users, setUsers] = useState([]);
   const [courses, setCourses] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -86,7 +86,9 @@ function DashboardSideBar() {
   return (
     <div className="d-flex" id="wrapper">
       <div className="border-end bg-white" id="sidebar-wrapper">
-        <div className="sidebar-heading border-bottom bg-light"><b>Dashboard menu</b></div>
+        <div className="sidebar-heading border-bottom bg-light">
+          <b>Dashboard menu</b>
+        </div>
         <div className="list-group list-group-flush">
           {options.map((option, index) => {
             return (
@@ -152,55 +154,69 @@ function DashboardSideBar() {
         </button>
         <div className="container-fluid">
           <div className="text-center">
-            {context.userData.role !== "author" ? selected === "General" ? (
-              <>
-                <DataTable Data={users} Titles={userTitle} Name="users" />
+            {context.userData.role !== "author" ? (
+              selected === "General" ? (
+                <>
+                  <DataTable Data={users} Titles={userTitle} Name="users" />
+                  <DataTable
+                    Data={courses}
+                    Titles={courseTitle}
+                    Name="courses"
+                  />
+                  <DataTable
+                    Data={categories}
+                    Titles={categoryTitle}
+                    Name="categories"
+                  />
+                  <DataTable
+                    Data={subCategories}
+                    Titles={subCategoryTitle}
+                    Name="subcategories"
+                  />
+                  <DataTable Data={topics} Titles={topicTitle} Name="topics" />
+                  <DataTable
+                    Data={sections}
+                    Titles={sectionTitle}
+                    Name="sections"
+                  />
+                </>
+              ) : selected === "Users" ? (
+                <>
+                  <DataTable Data={users} Titles={userTitle} Name="users" />
+                </>
+              ) : selected === "Courses" ? (
                 <DataTable Data={courses} Titles={courseTitle} Name="courses" />
+              ) : selected === "Categories" ? (
                 <DataTable
                   Data={categories}
                   Titles={categoryTitle}
                   Name="categories"
                 />
+              ) : selected === "Subcategories" ? (
                 <DataTable
                   Data={subCategories}
                   Titles={subCategoryTitle}
                   Name="subcategories"
                 />
+              ) : selected === "Topics" ? (
                 <DataTable Data={topics} Titles={topicTitle} Name="topics" />
+              ) : selected === "Sections" ? (
+                <DataTable
+                  Data={sections}
+                  Titles={sectionTitle}
+                  Name="sections"
+                />
+              ) : null
+            ) : (
+              <>
+                <DataTable Data={courses} Titles={courseTitle} Name="courses" />
                 <DataTable
                   Data={sections}
                   Titles={sectionTitle}
                   Name="sections"
                 />
               </>
-            ) : selected === "Users" ? (
-              <>
-                <DataTable Data={users} Titles={userTitle} Name="users" />
-              </>
-            ) : selected === "Courses" ? (
-              <DataTable Data={courses} Titles={courseTitle} Name="courses" />
-            ) : selected === "Categories" ? (
-              <DataTable
-                Data={categories}
-                Titles={categoryTitle}
-                Name="categories"
-              />
-            ) : selected === "Subcategories" ? (
-              <DataTable
-                Data={subCategories}
-                Titles={subCategoryTitle}
-                Name="subcategories"
-              />
-            ) : selected === "Topics" ? (
-              <DataTable Data={topics} Titles={topicTitle} Name="topics" />
-            ) : selected === "Sections" ? (
-              <DataTable
-                Data={sections}
-                Titles={sectionTitle}
-                Name="sections"
-              />
-            ) : null : <DataTable Data={courses} Titles={courseTitle} Name="courses" />}
-            
+            )}
           </div>
         </div>
       </div>

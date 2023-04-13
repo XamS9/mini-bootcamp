@@ -1,9 +1,11 @@
+import { returnToken } from "../helpers/localStorage.helper";
+
 async function GetUsers(path) {
-  const Users = await fetch(window.env.URL+path, {
+  const Users = await fetch(process.env.REACT_APP_URL+path, {
     method: "GET",
     mode: "cors",
     headers: {
-      authorization: "bearer " + window.localStorage.getItem("token"),
+      authorization: "bearer " + returnToken(),
     }
   })
     .then((res) => res.json())
