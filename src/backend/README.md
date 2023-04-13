@@ -7,7 +7,7 @@ Backend application for mini-bootcamp api.
 * Clone project.
 * Go to src/backend.
 * Run `npm i` command to install dependencies.
-* Before run the server you have to create the database in postgresql with the same data connection as .env file.
+* Before run the server you have to create a database in postgresql with the same connection data as .env file. (Every DB_* variable)
 * Start the backend server using `npm run dev`.
 * Send a GET request to `http://localhost:3001/admin` to create the admin user (you have to login as admin to enable new users).
 
