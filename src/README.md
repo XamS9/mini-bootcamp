@@ -1,6 +1,6 @@
 # Mini-bootcamp API
 
-Mini-bootcamp CRUD project
+Mini-bootcamp CRUD project using Reactjs + Postrgresql + Express
 
 ## About
 
