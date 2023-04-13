@@ -4,6 +4,7 @@
 /node_modules
 /.VSCodeCounter
 /.vscode
+/.env
 /.pnp
 .pnp.js
 
