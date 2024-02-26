@@ -52,14 +52,13 @@ function LoginForm() {
             ></input>
             <div className="invalid-feedback">Please enter your password</div>
           </div>
-          <Link to="/reset-password" className="d-flex align-items-center justify-content-center nav-link">Forgot password?</Link>
           <button type="submit" className="btn btn-primary w-100 mt-2">
             Sign In
           </button>
-          <Link to={'/register'}>
-          <button type="submit" className="btn btn-secundary w-100 mt-2">
-            Create new account
-          </button>
+          <Link to={"/register"}>
+            <button type="submit" className="btn btn-secundary w-100 mt-2">
+              Create new account
+            </button>
           </Link>
         </form>
       </div>

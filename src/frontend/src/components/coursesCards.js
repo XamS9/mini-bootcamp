@@ -28,7 +28,6 @@ function CoursesCard({ courses }) {
           confirmButtonColor: "#0d6efd",
         }).then((result) => {
           window.location.href = "/home";
-          context.setRefresh(context.refresh + 1);
         });
       }
     });
@@ -84,7 +83,6 @@ function CoursesCard({ courses }) {
                                     confirmButtonColor: "#0d6efd",
                                   }).then((result) => {
                                     window.location.href = "/home";
-                                    context.setRefresh(context.refresh + 1);
                                   });
                                 }
                               })
