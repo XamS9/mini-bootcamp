@@ -7,11 +7,11 @@ const dataReader = async () => {
     fs.createReadStream("./csv/data.csv")
       .pipe(csv({}))
       .on("data", (data) => admin.push(data))
-      .on("end", () => {})
-  } catch {
-    console.log("Error")
+      .on("end", () => {});
+  } catch (err) {
+    console.log("Error: ", err);
   }
-  return (admin[0])
+  return admin[0];
 };
 
 module.exports = { dataReader };

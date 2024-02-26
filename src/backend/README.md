@@ -18,3 +18,8 @@ Backend application for mini-bootcamp api.
 * .env file has the DB_NAME DB_USER DB_PASSWORD DB_HOST variable with all database connection data 
 * .env file has the CLOUD_NAME API_KEY API_SECRET variable with cloudinary api config
 * .env file has the SECRET variable with the jwt key
+
+## Build
+
+* Use `npm run build` to create the dist folder with the build
+* Use `npm run start` to run the build
