@@ -1,4 +1,4 @@
-# Mini-bootcamp API
+# Mini-bootcamp FRONTEND
 
 Frontend application for mini-bootcamp api.
 
