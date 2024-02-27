@@ -9,7 +9,7 @@ Backend application for mini-bootcamp api.
 * Run `npm i` command to install dependencies.
 * Rename `.env.template` file to `.env` and fill the variable with your current data.
 * Before run the server you have to create a database in postgresql with the same connection data as .env file. (Every DB_* variable).
-* There's a docker-compose file with a container with postgresql & pgAdmin4, customize the ENV as you need.
+* (OPTIONAL) There's a docker-compose file with a container with postgresql & pgAdmin4, customize the ENV as you need.
 * Start the backend server using `npm run dev`.
 * Send a GET request to `http://localhost:3001/admin` to create the admin user (you have to login as admin to enable new users).
 * Admin credentials are in admin.txt file.
